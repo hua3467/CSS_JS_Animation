@@ -55,6 +55,7 @@ hp-slide{
 hp-chooser {
     width: 100%;
     display: flex;
+    height: 20vmin;
     
     flex-direction: row;
     flex-wrap: nowrap;
@@ -65,4 +66,47 @@ hp-chooser {
 hp-chooser * {
     max-width: 20%;
     margin: 5% 2.5%;
+}
+
+hp-chooser.chosen>*.chosen{
+    max-width: 30%;
+}
+hp-chooser.chosen.animate>*.chosen{
+    animation-name: chosen;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+}
+
+@keyframes chosen {
+    from{
+        max-width:20%;
+    }
+    
+    to{
+        max-width: 30%;
+    }
+}
+
+hp-chooser.chosen>*:not(.chosen) {
+  max-width: 16.6%;
+    opacity: .25;
+}
+  
+  hp-chooser.chosen.animate>*:not(.chosen) {
+  animation-name: unchosen;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  }
+
+
+@keyframes unchosen {
+    from {
+        max-width: 20%;
+        opacity: 1.0;
+    }
+    
+    to{
+        max-width:16.6%;
+        opacity: .25;
+    }
 }

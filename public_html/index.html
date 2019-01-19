@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -16,22 +17,44 @@
 </head>
 
 <body>
-    
-<hp-content>
+  <hp-content>
     <hp-presentation>
-        <hp-slide class="active">
-            <hp-title>Which shape </hp-title>
-            <hp-chooser>
-                <img src="images/circle.svg" alt="circle">
-                <img src="images/diamond.svg" alt="diamond">
-                <img src="images/square.svg" alt="square">
-                <img src="images/triangle.svg" alt="triangle">
-            </hp-chooser>
-            <hp-title> doesn't belong?</hp-title>
-        </hp-slide>
+        
+      <hp-slide class="active">
+        <hp-title>Which shape</hp-title>
+        <hp-chooser>
+          <img src="images/triangle.svg"/>
+          <img src="images/circle.svg"/>
+          <img src="images/diamond.svg"/>
+          <img src="images/square.svg"/>
+        </hp-chooser>
+        <hp-title>doesn't belong?</hp-title>
+      </hp-slide>
+        
+      <hp-slide data-autoadvance="3500">
+        <hp-title>Which shape</hp-title>
+        <hp-chooser class="chosen animate">
+          <img src="images/triangle.svg"/>
+          <img class="chosen" src="images/circle.svg"/>
+          <img src="images/diamond.svg"/>
+          <img src="images/square.svg"/>
+        </hp-chooser>
+        <hp-title>doesn't belong?</hp-title>
+      </hp-slide>
+        
+        <hp-slide>
+        <hp-title>How did</hp-title>
+        <hp-chooser class="chosen">
+          <img src="images/triangle.svg"/>
+          <img class="chosen" src="images/circle.svg"/>
+          <img src="images/diamond.svg"/>
+          <img src="images/square.svg"/>
+        </hp-chooser>
+        <hp-title>you know?</hp-title>
+      </hp-slide>
+        
     </hp-presentation>
-</hp-content>
- 
+  </hp-content>
   <script src="js/main.js"></script>
 </body>
 </html>
